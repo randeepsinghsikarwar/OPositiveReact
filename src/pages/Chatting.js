@@ -5,24 +5,22 @@ export default function Chatting(){
 
     const[data, setData] = useState({
         chattingBox : "Say Hello!",
-        messageBox: []
+        messageBox: ["hello", "world"],
         })
-  
-
-   
-
 
     return(
         <div id="chattingParent">
             <div id = "messageBox">
-
+                {data.messageBox.map((item) => {
+                        console.log(item)
+                })}
             </div>
             <TextBox
-            Placeholder = "say hello!"
+            Placeholder = "say hello!"  
             inputId = "chattingBox"
-            onChangeAction = {(e) => {
-                setData({...data, chattingBox:e.target.value})
-            }}
+            // onChangeAction = {(e) => {
+            //     setData({...data, chattingBox:e.target.value})
+            // }}
             Type = "text"
             
             />

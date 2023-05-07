@@ -29,3 +29,14 @@ export function CustomButton(props) {
     </div>
   );
 }
+
+export function RenderList(props){
+  const list = props.list
+  return(
+    <div>
+      {list.map((item) => (
+        <li>{item}</li>
+      ))}
+    </div>
+  )
+}

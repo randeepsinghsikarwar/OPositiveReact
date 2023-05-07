@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CustomButton, TextBox } from "../components/Component";
+import { CustomButton, TextBox, RenderList } from "../components/Component";
 
 export default function Chatting(){
 
@@ -11,9 +11,9 @@ export default function Chatting(){
     return(
         <div id="chattingParent">
             <div id = "messageBox">
-                {data.messageBox.map((item) => {
-                        console.log(item)
-                })}
+               <RenderList
+               list = {data.messageBox}
+               />
             </div>
             <TextBox
             Placeholder = "say hello!"  

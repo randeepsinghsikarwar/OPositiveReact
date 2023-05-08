@@ -10,11 +10,11 @@ export default function Login(){
     });
 
     return(
-        <div class = "parent">
-            <div class = "leftPanel">
+        <div className = "parent">
+            <div className = "leftPanel">
                 
             </div>
-            <div class = "rightPanel">
+            <div className = "rightPanel">
 
                 <TextBox
                 parentId = "emailPatent"

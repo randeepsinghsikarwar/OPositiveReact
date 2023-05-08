@@ -3,25 +3,25 @@ import { CustomButton, TextBox, RenderList } from "../components/Component";
 
 export default function Chatting(){
 
-    const[data, setData] = useState({
-        chattingBox : "Say Hello!",
-        messageBox: ["hello", "world"],
-        })
+    const[messages, setMessages] = useState([]);
+    const [ chatbox, setChatbox] = useState();
+
 
     return(
         <div id="chattingParent">
             <div id = "messageBox">
                <RenderList
-               list = {data.messageBox}
+               list = {messages}
                />
             </div>
             <TextBox
             Placeholder = "say hello!"  
             inputId = "chattingBox"
-            // onChangeAction = {(e) => {
-            //     setData({...data, chattingBox:e.target.value})
-            // }}
             Type = "text"
+            Value = {chatbox}
+            onChangeAction = {(e) => {
+                    setChatbox(e.target.value);
+            }}
             
             />
             <CustomButton
@@ -37,7 +37,8 @@ export default function Chatting(){
             <CustomButton
             parentId = "sendButton"
             onClickAction = {(e) =>{
-                setData({...data, messageBox: data.messageBox + data.chattingBox })
+                setMessages([...messages, chatbox])
+                setChatbox('')
             }}
             buttonText = "Send"
             />

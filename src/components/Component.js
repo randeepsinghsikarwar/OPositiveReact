@@ -34,8 +34,8 @@ export function RenderList(props){
   const list = props.list
   return(
     <div>
-      {list.map((item) => (
-        <li>{item}</li>
+      {list.map((item, key) => (
+        <li key={key}>{item}</li>
       ))}
     </div>
   )

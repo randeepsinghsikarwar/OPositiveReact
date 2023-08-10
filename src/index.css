@@ -2,6 +2,51 @@
   margin: 0;
 }
 .App{
-  background-color: black;
+  background-color: white;
   height: 100vh;
+}
+
+#messageBox{
+  height: 95vh;
+  border: 1px dotted black;
+}
+
+#chatting_lower{
+  display: flex;
+  flex-direction: row;
+  height: 5vh;
+  
+}
+
+/* login page */
+.mid{
+  margin: 3rem;
+  max-height: 90vh;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.leftPanel, .rightPanel{
+  
+  height:auto;
+  width: 45vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.innerLeft {
+  background-color: rgba(255,255,255,0.92);
+}
+
+.meme, .innerLeft{
+  height: 90vh;
+  max-height: fit-content;
+  max-width: 100%;
+  
+  object-fit:contain;
 }

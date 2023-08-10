@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { CustomButton, TextBox, RenderList } from "../components/Component";
 
+
+
 export default function Chatting(){
 
     const[messages, setMessages] = useState([]);
@@ -14,7 +16,9 @@ export default function Chatting(){
                list = {messages}
                />
             </div>
+            <div id="chatting_lower">
             <TextBox
+            id = "a"
             Placeholder = "say hello!"  
             inputId = "chattingBox"
             Type = "text"
@@ -42,6 +46,7 @@ export default function Chatting(){
             }}
             buttonText = "Send"
             />
+            </div>
         </div>
     )
 }

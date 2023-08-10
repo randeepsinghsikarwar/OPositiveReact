@@ -8,6 +8,7 @@ import Chatting from './pages/Chatting';
 //pages
 
 import {Route,Routes, BrowserRouter} from 'react-router-dom';
+import Signup from './pages/Signup';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,6 +18,7 @@ root.render(
     <Route path = '/' element = {<App/>}/>
     <Route path = "/Login" element = {<Login/>}/>
     <Route path = "/Chatting" element = {<Chatting/>}/>
+    <Route path = '/Signup' element = {<Signup/>}/>
   </Routes>
   </BrowserRouter>
     ,

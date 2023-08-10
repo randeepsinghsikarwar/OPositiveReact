@@ -6,13 +6,17 @@ function App() {
   return (
     <div className="App">
       
+      <div>
+        <img src='asdad' alt=''/>
+      </div>
+
       <div className = "navBar">
           <ul>
             <li className = "login">
             <Link to = '/Login'>Login</Link>
             </li>
             <li className = "signup">
-            {/* link do */}
+            <Link to = '/Signup'>Signup</Link>
             </li>
             <li className = "guest">
             <Link to = '/Chatting'>Enter as a guest</Link>
